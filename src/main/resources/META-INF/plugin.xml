@@ -1,0 +1,47 @@
+<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
+<idea-plugin>
+    <!-- Unique identifier of the plugin. It should be FQN. It cannot be changed between the plugin versions. -->
+    <id>com.example.ide-plugin-learn-1</id>
+
+    <!-- Public plugin name should be written in Title Case.
+         Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-name -->
+    <name>CodeGen</name>
+
+    <!-- A displayed Vendor name or Organization ID displayed on the Plugins Page. -->
+    <vendor email="2063818987@qq.com" url="https://www.yourcompany.com">hxj</vendor>
+
+    <!-- Description of the plugin displayed on the Plugin Page and IDE Plugin Manager.
+         Simple HTML elements (text formatting, paragraphs, and lists) can be added inside of <![CDATA[ ]]> tag.
+         Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-description -->
+    <description><![CDATA[
+    desc haha ddddddddddddddddddddddddddddddddddddddddddddddddddd
+  ]]></description>
+
+    <!-- Product and plugin compatibility requirements.
+         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
+    <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.java</depends>
+
+    <!-- Extension points defined by the plugin.
+         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
+    <extensions defaultExtensionNs="com.intellij">
+        <!--<toolWindow id="Sample Calendar" secondary="false" icon="AllIcons.General.Modified" anchor="right"
+                    factoryClass="com.example.idepluginlearn1.MyToolWindowFactory"/>-->
+    </extensions>
+    <actions>
+        <!--<action id="actionId" class="com.example.idepluginlearn1.MainToolBarDemo" text="MainToolBarAction"
+                description="哈哈">
+            <add-to-group group-id="MainToolBar" anchor="last"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt SLASH"/>
+        </action>
+        <action id="ActionId" class="com.example.idepluginlearn1.ActionIdClassName" text="ActionIdName"
+                description="Description">
+            <add-to-group group-id="ProjectViewPopupMenu" anchor="last"/>
+        </action>-->
+        <action id="CodeGen" class="com.example.idepluginlearn1.CodeGenClassName" text="CodeGenName"
+                description="CodeGen desc">
+            <add-to-group group-id="GenerateGroup" anchor="last"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt G"/>
+        </action>
+    </actions>
+</idea-plugin>
