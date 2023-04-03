@@ -1,4 +1,4 @@
-package com.example.idepluginlearn1._0331;
+package com.github.hxj0x;
 
 import com.intellij.codeInsight.actions.ReformatCodeProcessor;
 import com.intellij.icons.AllIcons;
