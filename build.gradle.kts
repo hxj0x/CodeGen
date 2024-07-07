@@ -21,7 +21,7 @@ repositories {
 // Configure Gradle IntelliJ Plugin
 // Read more: https://plugins.jetbrains.com/docs/intellij/tools-gradle-intellij-plugin.html
 intellij {
-    version.set("2022.1.4")
+    version.set("2022.1.1")
     type.set("IC") // Target IDE Platform
 
     plugins.set(listOf("com.intellij.java"))
@@ -30,15 +30,15 @@ intellij {
 tasks {
     // Set the JVM compatibility versions
     withType<JavaCompile> {
-        sourceCompatibility = "11"
-        targetCompatibility = "11"
+        sourceCompatibility = "17"
+        targetCompatibility = "17"
         options.encoding = "UTF-8"
     }
 
-    patchPluginXml {
-        sinceBuild.set("221")
-        untilBuild.set("231.*")
-    }
+    // patchPluginXml {
+    //     sinceBuild.set("221")
+    //     untilBuild.set("231.*")
+    // }
 
     signPlugin {
         certificateChain.set(System.getenv("CERTIFICATE_CHAIN"))
