@@ -41,6 +41,8 @@
     <extensions defaultExtensionNs="com.intellij">
     </extensions>
 
+     <idea-version since-build="221.*"/>
+    
     <actions>
         <action id="CodeGen" class="com.github.hxj0x.CodeGenClassName" text="CodeGen"
                 description="CodeGen desc">
