@@ -7,4 +7,4 @@ pluginManagement {
     }
 }
 
-rootProject.name = "idea-plugin-demo"
+rootProject.name = "codegen"
