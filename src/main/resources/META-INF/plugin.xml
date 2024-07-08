@@ -3,7 +3,7 @@
     <!-- Unique identifier of the plugin. It should be FQN. It cannot be changed between the plugin versions. -->
     <id>com.github.hxj0x</id>
     <!-- 版本号: 主版本号.次版本号.修订号 https://semver.org/lang/zh-CN/ -->
-    <version>1.0.0</version>
+    <version>1.0.1</version>
 
     <!-- Public plugin name should be written in Title Case.
          Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-name -->
@@ -11,8 +11,6 @@
 
     <!-- A displayed Vendor name or Organization ID displayed on the Plugins Page. -->
     <vendor email="2063818987@qq.com" url="https://github.com/hxj0x">hxj</vendor>
-
-    <!-- 兼容的IDEA版本范围, 发版前请务必测试 -->
 
     <!-- Description of the plugin displayed on the Plugin Page and IDE Plugin Manager.
          Simple HTML elements (text formatting, paragraphs, and lists) can be added inside of <![CDATA[ ]]> tag.
@@ -28,7 +26,6 @@
         <li>You can select the fields to generate a DTO.</li>
         <li>Additional document annotations can be generated on @ ApiModelProperty</li>
     </ul>
-
   ]]></description>
 
     <!-- Product and plugin compatibility requirements.
@@ -41,14 +38,13 @@
     <extensions defaultExtensionNs="com.intellij">
     </extensions>
 
-     <idea-version since-build="221.*"/>
-    
+    <idea-version since-build="221.*"/>
+
     <actions>
-        <action id="CodeGen" class="com.github.hxj0x.CodeGenClassName" text="CodeGen"
+        <action id="CodeGen" class="com.github.hxj0x.idea.codegen.CodeGenClassName" text="CodeGen"
                 description="CodeGen desc">
             <add-to-group group-id="GenerateGroup" anchor="last"/>
             <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt G"/>
         </action>
     </actions>
-
 </idea-plugin>

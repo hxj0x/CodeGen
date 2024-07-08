@@ -1,10 +1,11 @@
 plugins {
     id("java")
-    id("org.jetbrains.intellij") version "1.10.1"
+    id("org.jetbrains.kotlin.jvm") version "1.9.23"
+    id("org.jetbrains.intellij") version "1.17.3"
 }
 
-group = "com.example"
-version = "1.0-SNAPSHOT"
+group = "com.hxj0x.idea.codegen"
+version = "1.0.1-SNAPSHOT"
 
 repositories {
     // 依赖使用阿里云 maven 源
@@ -21,9 +22,8 @@ repositories {
 // Configure Gradle IntelliJ Plugin
 // Read more: https://plugins.jetbrains.com/docs/intellij/tools-gradle-intellij-plugin.html
 intellij {
-    version.set("2022.1.1")
+    version.set("2023.2.6")
     type.set("IC") // Target IDE Platform
-
     plugins.set(listOf("com.intellij.java"))
 }
 
@@ -34,11 +34,14 @@ tasks {
         targetCompatibility = "17"
         options.encoding = "UTF-8"
     }
+    withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
+        kotlinOptions.jvmTarget = "17"
+    }
 
-    // patchPluginXml {
-    //     sinceBuild.set("221")
-    //     untilBuild.set("231.*")
-    // }
+    patchPluginXml {
+        sinceBuild.set("232")
+        untilBuild.set("242.*")
+    }
 
     signPlugin {
         certificateChain.set(System.getenv("CERTIFICATE_CHAIN"))

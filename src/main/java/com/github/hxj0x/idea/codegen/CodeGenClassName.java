@@ -1,4 +1,4 @@
-package com.github.hxj0x;
+package com.github.hxj0x.idea.codegen;
 
 import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.AnActionEvent;
