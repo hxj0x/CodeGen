@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "com.hxj0x.idea.codegen"
-version = "1.0.1-SNAPSHOT"
+version = "1.0.2-SNAPSHOT"
 
 repositories {
     // 依赖使用阿里云 maven 源
