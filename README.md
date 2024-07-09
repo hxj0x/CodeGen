@@ -11,3 +11,8 @@
 * You can select the fields to generate a DTO.
 * Additional document annotations can be generated on @ ApiModelProperty
 
+## todo
+
+### 代码自动生成
+
+`com.intellij.ide.actionMacro.ActionMacroManager.ActionMacroMana`ger的构造方法
